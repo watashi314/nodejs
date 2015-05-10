@@ -90,13 +90,6 @@ app.post('/api/users', function (req, res) {
 		}
 	);
 	
-	req.login(user, function(err) {
-		if (err) { 
-			return res.sendStatus (500);
-		}
-	});
-
-	return res.sendStatus(200);
 });
 
 app.post('/api/auth/logout', function (req, res) {
