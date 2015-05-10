@@ -6,4 +6,3 @@ fileName = path.join (__dirname, fileName);
 nconf.file(fileName);
 //console.log (nconf.get('server:port'));
 module.exports = nconf;
-//test
