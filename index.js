@@ -81,6 +81,12 @@ app.post('/api/users', function (req, res) {
 			} else {
 				console.log ("Saved user successfully");
 			}
+			req.login(user, function(err) {
+				if (err) { 
+					return res.sendStatus (500);
+				}
+			});
+			return res.sendStatus(200);
 		}
 	);
 	
